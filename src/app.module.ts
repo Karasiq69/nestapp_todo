@@ -7,7 +7,7 @@ import { Todo } from './todo/todo.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'database.sqlite',
+      database: ':memory:',
       entities: [Todo],
       synchronize: true,
       logging: ['query', 'error'],
